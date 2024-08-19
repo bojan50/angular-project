@@ -1,3 +1,4 @@
+<h2>Employees table</h2>
 <div class="container">
   <table mat-table [dataSource]="employeeMonthlyTimes" class="mat-elevation-z8 custom-table">
     <ng-container matColumnDef="EmployeeName">
@@ -5,22 +6,27 @@
       <td mat-cell *matCellDef="let element">{{ element.EmployeeName }}</td>
     </ng-container>
 
-    <ng-container matColumnDef="TotalTimeInHours">
-      <th mat-header-cell *matHeaderCellDef>Total Time in Month</th>
-      <td mat-cell *matCellDef="let element">
+    <ng-container matColumnDef="TotalTimeInHours" >
+      <th mat-header-cell *matHeaderCellDef class="secondThirdRow">Total Time in Month</th>
+      <td mat-cell *matCellDef="let element" class="secondThirdRow">
         {{ element.TotalTimeInHours | number:'1.0-0' }} hrs
       </td>
     </ng-container>
 
     <ng-container matColumnDef="Actions">
-      <th mat-header-cell *matHeaderCellDef>Actions</th>
-      <td mat-cell *matCellDef="let element"><a href="#" class="edit-link">Edit</a></td>
+      <th mat-header-cell *matHeaderCellDef class="secondThirdRow">Actions</th>
+      <td mat-cell *matCellDef="let element" class="secondThirdRow"><a href="#" class="edit-link">Edit</a></td>
     </ng-container>
 
-    <!-- Apply the ngClass to the tr element -->
     <tr mat-header-row *matHeaderRowDef="['EmployeeName', 'TotalTimeInHours', 'Actions']"></tr>
     <tr mat-row *matRowDef="let row; columns: ['EmployeeName', 'TotalTimeInHours', 'Actions'];"
         [ngClass]="{'highlight-row': row.TotalTimeInHours < 100}">
     </tr>
   </table>
+</div>
+
+
+<div style="width: 50%; height: 50%; margin: auto; padding-top: 20px;">
+  <h2>Pie chart</h2>
+  <canvas id="pieChart"></canvas>
 </div>

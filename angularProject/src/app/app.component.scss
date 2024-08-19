@@ -1,7 +1,7 @@
 .container {
-  width: 40%;
+  width: 30%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .custom-table {
@@ -13,11 +13,11 @@
   background-color: #c5bebe;
   font-weight: bold;
   text-align: left;
+  border: 1px solid rgb(145, 134, 134);
 }
 
-td.mat-cell {
-  padding: 8px 16px;
-  border-bottom: 1px solid #ddd;
+.mat-mdc-cell {
+  border: 1px solid rgb(192, 182, 182);
 }
 
 td.mat-cell:last-child {
@@ -30,9 +30,18 @@ td.mat-cell:last-child {
 
 .edit-link {
   color: #007bff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .edit-link:hover {
   text-decoration: underline;
+}
+
+.secondThirdRow {
+  text-align: center !important;
+}
+
+
+h2{
+  text-align: center !important;
 }
